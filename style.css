@@ -84,11 +84,29 @@ span {
   grid-row-gap: 32px;
 }
 
-.music {
+.music-off {
   border: none;
   border-radius: 2.4rem;
   background-color: transparent;
   cursor: pointer;
+  background-color: #E1E1E6;
+  width: 14rem;
+  height: 15rem;
+}
+
+.music-off img,
+.music-on img{
+  pointer-events: none
+}
+
+.music-on {
+  border: none;
+  border-radius: 2.4rem;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: #02799D;
+  width: 14rem;
+  height: 15rem;
 }
 
 
