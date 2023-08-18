@@ -5,11 +5,21 @@ import state from "./state.js"
 export function toggleMusic () {
   controls.musicControl.addEventListener('click', (event) => {
     const action = event.target.dataset.action
-
-    const button = document.querySelector(`[data-action="${action}"]`)
     
     if (typeof sounds[action] != 'object'){
       return
+    }
+
+    const button = document.querySelector(`[data-action="${action}"]`)
+
+    const musicButtons = Array.from(controls.musicControl.children)
+    const playingMusics = musicButtons.filter((control) => control.classList.contains('music-on'))
+
+    for (const playingMusic of playingMusics) {
+      playingMusic.classList.remove('music-on')
+      playingMusic.classList.add('music-off')
+      sounds[playingMusic.dataset.action].pause()
+      state.isMute = true
     }
 
     if (!state.isMute) {
