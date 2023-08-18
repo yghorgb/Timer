@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-color: #323238;
+  --secondary-color: #fff;
+  --primary-bg: #fff;
+  --secondary-bg: #323238;
+}
+
+html.dark-mode{
+  --primary-color: #fff;
+  --primary-bg: #323238;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  background-color: var(--primary-bg);
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  border: none;
+  background-color: transparent;
+  font-size: 4rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+html.dark-mode .ph-moon,
+html:not(.dark-mode) .ph-sun {
+  display: none;
+}
+
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
+#app{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 19.2rem;
+}
+
+
+span {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+
+  margin-top: 1.7rem;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 4.8rem;
+  cursor: pointer;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+
+.music {
+  border: none;
+  border-radius: 2.4rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+

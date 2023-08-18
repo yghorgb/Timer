@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+      <button id="toggle-mode">
+        <i class="ph ph-moon"></i>
+        <i class="ph ph-sun"></i>
+      </button>
+    <div class="timer">
+      <div class="clock">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+      <div class="controls">
+        <button 
+          data-action="togglestart"
+          class="ph ph-play-circle">
+        </button>
+        <button 
+          data-action="togglestart"
+          class="ph ph-pause-circle">
+        </button>
+        <button 
+          data-action="reset"
+          class="ph ph-stop-circle">
+        </button>
+        <button 
+          data-action="increase"
+          class="ph ph-plus-circle">
+        </button>
+        <button 
+          data-action="decrease"
+          class="ph ph-minus-circle">
+        </button>
+      </div>
+    </div>
+    <div class="music-grid">
+      <button 
+        data-action="forest"
+        class="music">
+        <img src="./assets/forest.svg" alt="forest">
+      </button>
+      <button 
+        data-action="rain"
+        class="music">
+        <img src="./assets/rain.svg" alt="rain">
+      </button>
+      <button 
+        data-action="shop"
+        class="music">
+        <img src="./assets/shop.svg" alt="shop">
+      </button>
+      <button 
+        data-action="fire"
+        class="music">
+        <img src="./assets/fire.svg" alt="fire">
+      </button>
+    </div>
+  </div>
+</body>
+</html>

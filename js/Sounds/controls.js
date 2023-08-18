@@ -1,0 +1,1 @@
+export const musicControl = document.querySelector(".music-grid")
